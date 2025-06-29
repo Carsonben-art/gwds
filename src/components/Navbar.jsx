@@ -42,7 +42,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         {!isMobile && (
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
+          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start', paddingLeft: '2rem' }}>
             {pages.map((page) => (
               <Button
                 key={page}

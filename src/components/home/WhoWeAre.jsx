@@ -17,7 +17,7 @@ const WhoWeAre = () => {
         >
           {/* Left content */}
           <Box sx={{ flex: 1 }}>
-            <Typography variant="subtitle2" color="grey.400" gutterBottom>
+            <Typography variant="subtitle2" color="grey.600" gutterBottom>
                           WHO WE ARE?
                         </Typography>
             <Typography
@@ -35,7 +35,7 @@ const WhoWeAre = () => {
                  A Web Development Group striving to eventually serve the <span>worldwide community</span>
             </Typography>
 
-            <Typography variant="body1" color="grey.400" paragraph>
+            <Typography variant="body1" color="grey.600" paragraph>
               At GWDS, we are a driven team of
                 Developers specializing in the creation of beautiful websites at an affordable and
                 competitive price. Our Developers are armed with several years of experience

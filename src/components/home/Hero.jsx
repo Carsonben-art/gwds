@@ -96,7 +96,7 @@ const Hero = () => {
           />
         </Box>
 
-        <Typography variant="h6" color="grey.400" gutterBottom sx={{ mt: 3 }}>
+        <Typography variant="h6" color="#fff" gutterBottom sx={{ mt: 3 }}>
           Affordable Web Development Group Serving Clients in North America and Europe
         </Typography>
 

@@ -43,7 +43,7 @@ const Services = () => {
                 image={item.image}
                 title={item.title}
                 buttonText={item.text}
-                // bgColor="#ffcdd2"
+                bgColor="#fff"
               />
             ))}
           </Box>
@@ -59,7 +59,7 @@ const Services = () => {
               textAlign: { xs: 'center', md: 'left' },
             }}
           >
-            <Typography variant="subtitle2" color="grey.400" gutterBottom>
+            <Typography variant="subtitle2" color="grey.600" gutterBottom>
               Our Services
             </Typography>
 
@@ -78,7 +78,7 @@ const Services = () => {
               End-to-End Web Solutions for Your <span>Digital Success</span>
             </Typography>
 
-            <Typography variant="body1" color="grey.400" mb={3}>
+            <Typography variant="body1" color="grey.600" mb={3}>
               We provide complete web solutions — from creating powerful, custom websites to keeping them secure, fast, and always up-to-date.
             </Typography>
 
