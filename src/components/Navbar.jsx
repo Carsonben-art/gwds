@@ -28,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#000' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#060606' }}>
       <Toolbar>
         {/* Logo */}
         <Box sx={{ display: 'flex', alignItems: 'center', mr: 2, flexDirection: 'column' }}>

@@ -1,31 +1,105 @@
 import React from 'react';
-import { Box, Typography, Button, Grid, Container } from '@mui/material';
+import { Box, Typography, Button, Container } from '@mui/material';
+
+import epesipayImg from '../../assets/images/epesipay.png';
+import rightImg from '../../assets/images/right.png';
+import spsImg from '../../assets/images/sps.png';
+import bgImage from '../../assets/images/bg.png';
 
 const Hero = () => {
   return (
     <Box
       sx={{
+        position: 'relative',
         backgroundColor: '#000',
         color: '#fff',
         py: 8,
         textAlign: 'center',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        overflow: 'hidden',
       }}
     >
-      <Container maxWidth="md">
-        {/* Title */}
+      {/* Background image */}
+      <Box
+        sx={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.2,
+          zIndex: 0,
+        }}
+      />
+
+      {/* Content */}
+      <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
         <Typography variant="h2" fontWeight="bold" gutterBottom>
-          Crafted Websites
+          CREATIVE WEB
         </Typography>
         <Typography variant="h2" fontWeight="bold" gutterBottom>
-          that Convert
+          DEVELOPMENT SERVICES
         </Typography>
 
-        {/* Subtitle */}
-        <Typography variant="h6" color="grey.400" gutterBottom>
-          High-performing, visually stunning websites designed to grow your brand online.
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            flexWrap: 'nowrap',
+            gap: 2,
+            mt: 5,
+          }}
+        >
+          <Box
+            component="img"
+            src={epesipayImg}
+            alt="Website 1"
+            sx={{
+              width: '300px',
+              height: '170px',
+              objectFit: 'cover',
+              borderRadius: 2,
+              border: '2px solid #fff',
+            }}
+          />
+          <Box
+            component="img"
+            src={rightImg}
+            alt="Website 2"
+            sx={{
+              width: '300px',
+              height: '170px',
+              objectFit: 'cover',
+              borderRadius: 2,
+              border: '2px solid #fff',
+            }}
+          />
+          <Box
+            component="img"
+            src={spsImg}
+            alt="Starting Point"
+            sx={{
+              width: '300px',
+              height: '170px',
+              objectFit: 'cover',
+              borderRadius: 2,
+              border: '2px solid #fff',
+            }}
+          />
+        </Box>
+
+        <Typography variant="h6" color="grey.400" gutterBottom sx={{ mt: 3 }}>
+          Affordable Web Development Group Serving Clients in North America and Europe
         </Typography>
 
-        {/* CTA Button */}
         <Button
           variant="contained"
           sx={{
@@ -38,70 +112,8 @@ const Hero = () => {
             },
           }}
         >
-          Book a Free Call
+          View Our Portfolio
         </Button>
-
-        {/* Screenshots */}
-        <Grid
-          container
-          spacing={2}
-          justifyContent="center"
-          alignItems="center"
-          sx={{ mt: 5 }}
-        >
-          <Grid item xs={12} sm={6} md={4}>
-            <Box
-              component="img"
-              src="https://via.placeholder.com/300x200?text=Website+1"
-              alt="Website 1"
-              sx={{
-                width: '100%',
-                borderRadius: 2,
-                border: '2px solid #fff',
-              }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Box
-              component="img"
-              src="https://via.placeholder.com/300x200?text=Website+2"
-              alt="Website 2"
-              sx={{
-                width: '100%',
-                borderRadius: 2,
-                border: '2px solid #fff',
-              }}
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Box
-              component="img"
-              src="https://via.placeholder.com/300x200?text=Website+3"
-              alt="Website 3"
-              sx={{
-                width: '100%',
-                borderRadius: 2,
-                border: '2px solid #fff',
-              }}
-            />
-          </Grid>
-        </Grid>
-
-        {/* "Made in Framer" badge placeholder */}
-        <Box sx={{ mt: 4 }}>
-          <Typography
-            variant="caption"
-            sx={{
-              backgroundColor: '#222',
-              borderRadius: 1,
-              px: 1,
-              py: 0.5,
-              display: 'inline-block',
-            }}
-          >
-            Made in Framer
-          </Typography>
-        </Box>
       </Container>
     </Box>
   );
