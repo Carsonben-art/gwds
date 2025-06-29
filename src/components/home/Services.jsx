@@ -18,7 +18,7 @@ const Services = () => {
   ];
 
   return (
-    <Box sx={{ backgroundColor: '#0b0b12', color: '#fff', py: 8 }}>
+    <Box sx={{ backgroundColor: '#04050e', color: '#fff', py: 8 }}>
       <Container>
         <Box
           sx={{
