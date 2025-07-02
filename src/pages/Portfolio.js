@@ -1,43 +1,36 @@
 import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent } from '@mui/material';
 
-import law from '../assets/images/law.jpg'
-import brain from '../assets/images/brain.jpg'
-import baze from '../assets/images/baze2.jpg'
-import right from '../assets/images/right2.jpg'
-import giroux from '../assets/images/giroux2.jpg'
+import beauty from '../assets/images/beauty.jpg'
+import outfit from '../assets/images/outfit.jpg'
+import flower from '../assets/images/flower.jpg'
+import right from '../assets/images/brain.jpg'
 import epesipay from '../assets/images/epesipay3.jpg'
 
 const portfolioItems = [
   {
-    title: 'Engelfeldmann',
-    description: 'https://engelfeldmann.com/',
-    image: law,
-    link: 'https://engelfeldmann.com/'
+    title: 'Beauty Bakerie',
+    description: 'https://www.beautybakerie.com/',
+    image: beauty,
+    link: 'https://www.beautybakerie.com/'
   },
   {
-    title: 'Baze Built Homes',
-    description: 'https://bazebuilthomes.com/',
-    image: baze,
-    link: 'https://bazebuilthomes.com/'
+    title: 'Faherty Brand',
+    description: 'https://fahertybrand.com/',
+    image: outfit,
+    link: 'https://fahertybrand.com/'
   },
   {
-    title: 'Salts Dart Mouth',
-    description: 'https://saltsdartmouth.com/',
-    image: brain,
-    link: 'https://saltsdartmouth.com/'
+    title: 'Rhema Flowers',
+    description: 'https://rhemaflowers.com/',
+    image: flower,
+    link: 'https://rhemaflowers.com/'
   },
   {
-    title: 'Right Turntn',
-    description: 'https://rightturntn.com/',
+    title: 'Starting Point Solutions',
+    description: 'http://startingpointsolutions.co.ke/',
     image: right,
-    link: 'https://rightturntn.com/'
-  },
-  {
-    title: 'Giroux Electronics',
-    description: 'https://girouxelectric.com/services/',
-    image: giroux,
-    link: 'https://girouxelectric.com/services/'
+    link: 'http://startingpointsolutions.co.ke/'
   },
   {
     title: 'Epesipay',

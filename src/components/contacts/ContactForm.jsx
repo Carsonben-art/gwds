@@ -137,10 +137,10 @@ const ContactForm = () => {
           Find our contact information below. We’re always happy to hear from you.
         </Typography>
         <Typography variant="body2" fontSize='1.3rem' sx={{ fontWeight: 'bold' }}>
-          Call Us For Support
+          Email Us For Support
         </Typography>
         <Typography variant="body2" fontSize='1.2rem' color='#9296b5' sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-          <PhoneIcon sx={{ mr: 1 }} /> (888)1234-5678
+          <EmailIcon sx={{ mr: 1 }} /> webdevelopment@gwdsgroup.com
         </Typography>
         <Box sx={{ display: 'flex', gap: -5 }}>
           {/* Replace with actual team member images */}
