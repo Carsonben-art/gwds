@@ -34,7 +34,7 @@ const resources = [
   },
   {
     title: 'Giroux Electronics',
-    subtitle: 'Google Worksheethttps://girouxelectric.com/services/',
+    subtitle: 'https://girouxelectric.com/services/',
     img: giroux,
     link: 'https://girouxelectric.com/services/',
   },
