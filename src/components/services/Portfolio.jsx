@@ -58,7 +58,7 @@ const Portfolio = () => {
         We Can Build
         </Typography>
         <Box display={'flex'} justifyContent={'center'}>
-        <Typography maxWidth={'800px'} align="center" color="grey.400" sx={{ mb: 4 }}>
+        <Typography maxWidth={'800px'} align="center" color="#9296b5" sx={{ mb: 4 }}>
           Explore templates, checklists, and ready-made designs for 5-page websites from homepages to contact forms - all crafted to kickstart your next project.
         </Typography>
 
@@ -94,7 +94,7 @@ const Portfolio = () => {
                     <Typography fontWeight="bold" sx={{ color: '#fff' }}>
                       {resource.title}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'grey.500' }}>
+                    <Typography variant="body2" sx={{ color: '#9296b5' }}>
                       {resource.subtitle}
                     </Typography>
                   </CardContent>

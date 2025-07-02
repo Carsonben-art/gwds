@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 import epesipayImg from '../../assets/images/epesipay.png';
 import rightImg from '../../assets/images/right.png';
@@ -41,12 +42,24 @@ const Hero = () => {
 
       {/* Content */}
       <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
-        <Typography variant="h2" fontWeight="bold" gutterBottom>
-          CREATIVE WEB
-        </Typography>
-        <Typography variant="h2" fontWeight="bold" gutterBottom>
-          DEVELOPMENT SERVICES
-        </Typography>
+        <Typography variant="h1" 
+                sx={{ 
+                  fontWeight: 'bold', 
+                  mb: 1, 
+                  fontSize: {
+                    xs: '2.8rem',   
+                    sm: '2.8rem', 
+                    md: '5rem'   
+                } }}>
+                CREATIVE WEB DEVELOPMENT{' '}
+                <span style={{
+                  background: 'linear-gradient(45deg, #ff5f6d, #a17fe0)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent'
+                }}>
+                  SERVICES
+                </span>
+              </Typography>
 
         <Box
           sx={{
@@ -63,8 +76,8 @@ const Hero = () => {
             src={epesipayImg}
             alt="Website 1"
             sx={{
-              width: '300px',
-              height: '170px',
+              width: { xs: '100px', sm: '180px', md: '300px' },
+              height: { xs: '80px', sm: '100px', md: '170px' },
               objectFit: 'cover',
               borderRadius: 2,
               border: '2px solid #fff',
@@ -75,8 +88,8 @@ const Hero = () => {
             src={rightImg}
             alt="Website 2"
             sx={{
-              width: '300px',
-              height: '170px',
+              width: { xs: '100px', sm: '180px', md: '300px' },
+              height: { xs: '80px', sm: '100px', md: '170px' },
               objectFit: 'cover',
               borderRadius: 2,
               border: '2px solid #fff',
@@ -87,8 +100,8 @@ const Hero = () => {
             src={spsImg}
             alt="Starting Point"
             sx={{
-              width: '300px',
-              height: '170px',
+              width: { xs: '100px', sm: '180px', md: '300px' },
+              height: { xs: '80px', sm: '100px', md: '170px' },
               objectFit: 'cover',
               borderRadius: 2,
               border: '2px solid #fff',
@@ -101,6 +114,8 @@ const Hero = () => {
         </Typography>
 
         <Button
+          component={Link}
+          to="/services"
           variant="contained"
           sx={{
             mt: 3,

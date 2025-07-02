@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Card, CardMedia, CardContent, Button } from '@mui/material';
 
+import { Link } from 'react-router-dom';
 const ExpenseCard = ({
   image,
   title,
@@ -34,6 +35,8 @@ const ExpenseCard = ({
           </Typography>
 
           <Button
+            component={Link}
+            to="/services"
             variant="contained"
             size="small"
             sx={{
@@ -44,7 +47,7 @@ const ExpenseCard = ({
                 backgroundColor: '#009acd',
               },
             }}
-            onClick={onButtonClick}
+            
           >
             {buttonText}
           </Button>

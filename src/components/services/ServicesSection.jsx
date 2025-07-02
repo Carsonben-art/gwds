@@ -36,7 +36,7 @@ const ServicesSection = () => {
           />
           {/* Right content */}
           <Box flex={1}>
-            <Typography variant="subtitle2" sx={{ color: 'grey.500', mb: 1 }}>
+            <Typography variant="subtitle2" sx={{ color: '#9296b5', mb: 1 }}>
               Our Services
             </Typography>
 
@@ -74,7 +74,7 @@ const ServicesSection = () => {
                 <CheckCircleIcon sx={{ color: '#ff5f6d', mt: '3px' }} />
                 <Box>
                   <Typography variant='h4'>Web Development</Typography>
-                  <Typography variant="body2" color="grey.400">
+                  <Typography variant="body2" color="#9296b5">
                     We focus on building 5 page websites for small businesses. For any other
                     website, we will connect you to developers we are partnered with, and
                     who will be able to complete the job. <br/> <br/>
@@ -89,7 +89,7 @@ const ServicesSection = () => {
                 <CheckCircleIcon sx={{ color: '#ff5f6d', mt: '3px' }} />
                 <Box>
                   <Typography variant='h4'>Website maintenance</Typography>
-                  <Typography variant="body2" color="grey.400">
+                  <Typography variant="body2" color="#9296b5">
                     We provide monthly maintenance for your website after it's hosted to
                     make sure it keeps running. This includes Basic Search Engine
                     Optimization, Updating Software, Plugins, Fixing Broken Links and Errors,

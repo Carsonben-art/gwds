@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <Box sx={{ backgroundColor: '#04050e', color: '#fff', py: 6 }}>
       <Container maxWidth="lg">
-        <Grid container spacing={20}>
+        <Grid container spacing={{xs: 5, md: 20}}>
           {/* Left section: Brand + subscription */}
           <Grid item xs={12} md={4}>
             <Typography
@@ -24,7 +24,13 @@ const Footer = () => {
             >
                  <span>GWDS</span>
             </Typography>
-             <Typography variant="h6" color="#fff" >
+             <Typography 
+              variant="h6" 
+              color="#9296b5"
+              fontSize={{
+                xs: '1rem',
+                md: '2rem'
+              }} >
                 Global Web Development Standard
                 </Typography>
             

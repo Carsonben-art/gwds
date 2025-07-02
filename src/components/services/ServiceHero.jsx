@@ -13,7 +13,7 @@ const ServiceHero = () => {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: '100vh',
+        height: {xs: 'auto', md: '100vh'},
         display: 'flex',
         alignItems: 'center',
       }}
@@ -30,7 +30,7 @@ const ServiceHero = () => {
         >
           {/* Text content on the left */}
           <Box sx={{ flex: 1 }}>
-            <Typography variant="subtitle2" sx={{ color: 'grey.400', mb: 1 }}>
+            <Typography variant="subtitle2" sx={{ color: '#9296b5', mb: 1 }}>
             Services
             </Typography>
 
@@ -62,7 +62,7 @@ const ServiceHero = () => {
               Reliable Maintenance
             </Typography>
 
-            <Typography variant="body1" color="grey.400" sx={{ mt: 2 }}>
+            <Typography variant="body1" color="#9296b5" sx={{ mt: 2 }}>
               We craft modern, high-performing websites tailored to your business needs and keep them running smoothly with proactive maintenance and support.
             </Typography>
           </Box>
@@ -94,11 +94,13 @@ const ServiceHero = () => {
               component="img"
               src={creativeImg}
               alt="VR user"
+              
               sx={{
                 width: '300px',
                 height: '400px',
                 objectFit: 'cover',
                 borderRadius: 3,
+                display:{xs: 'none', md: 'block'}
                 // mb: { xs: 4, sm: 0 },
               }}
             />

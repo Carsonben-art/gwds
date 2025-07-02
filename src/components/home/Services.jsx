@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
-import ExpenseCard from './Card'; // Import your reusable card component
+import { Link } from 'react-router-dom';
+
+import ExpenseCard from './Card'; 
 import webdev from '../../assets/images/webdev.jpg'
 import webm from '../../assets/images/wedm.jpg'
 const Services = () => {
@@ -59,7 +61,7 @@ const Services = () => {
               textAlign: { xs: 'center', md: 'left' },
             }}
           >
-            <Typography variant="subtitle2" color="grey.600" gutterBottom>
+            <Typography variant="subtitle2" color="#9296b5" gutterBottom>
               Our Services
             </Typography>
 
@@ -78,11 +80,13 @@ const Services = () => {
               End-to-End Web Solutions for Your <span>Digital Success</span>
             </Typography>
 
-            <Typography variant="body1" color="grey.600" mb={3}>
+            <Typography variant="body1" color="#9296b5" mb={3}>
               We provide complete web solutions — from creating powerful, custom websites to keeping them secure, fast, and always up-to-date.
             </Typography>
 
             <Button
+              component={Link}
+              to="/services"
               variant="contained"
               sx={{
                 backgroundColor: '#00bfff',

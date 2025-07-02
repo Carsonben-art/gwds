@@ -50,10 +50,18 @@ const portfolioItems = [
 const Portfolio = () => {
   return (
     <Box sx={{ bgcolor: '#04050e', color: '#fff', p: { xs: 2, md: 20 } }}>
-        <Typography variant="body1" fontSize='2rem' color='#9296b5' sx={{ maxWidth: 600, mb: 4 }}>
-         Our Portfolio
-        </Typography>
-      <Typography variant="h1" sx={{ fontWeight: 'bold', mb: 1 }}>
+      <Typography variant="body1" fontSize='2rem' color='#9296b5' sx={{ maxWidth: 600, mb: 4 }}>
+        Our Portfolio
+      </Typography>
+      <Typography variant="h1" 
+        sx={{ 
+          fontWeight: 'bold', 
+          mb: 1, 
+          fontSize: {
+            xs: '2.5rem',   
+            sm: '2.5rem', 
+            md: '4rem'   
+        } }}>
         EXPLORE OUR{' '}
         <span style={{
           background: 'linear-gradient(45deg, #ff5f6d, #a17fe0)',
@@ -81,15 +89,27 @@ const Portfolio = () => {
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ textDecoration: 'none', flex: '1 1 calc(50% - 16px)', maxWidth: 'calc(50% - 16px)' }}
+            style={{ 
+              textDecoration: 'none',
+              flex: '1 1 100%',
+              maxWidth: '100%',
+              '@media (min-width:600px)': { 
+                flex: '1 1 calc(50% - 16px)', 
+                maxWidth: 'calc(50% - 16px)' 
+              }
+            }}
           >
             <Card sx={{ bgcolor: 'transparent', color: '#fff' }}>
               <CardMedia
                 component="img"
-                height={600}
                 image={item.image}
                 alt={item.title}
-                sx={{ borderRadius: 8}}
+                sx={{
+                  borderRadius: { xs: 2, md: 8 },
+                  height: { xs: 300, sm: 400, md: 600 },
+                  width: '100%',
+                  objectFit: 'cover'
+                }}
               />
               <CardContent>
                 <Typography variant="subtitle1" fontSize='1.5rem' sx={{ fontWeight: 'bold' }}>

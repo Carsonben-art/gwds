@@ -39,7 +39,7 @@ const WhyUs = () => {
     <Box sx={{ backgroundColor: '#04050e', color: '#fff', py: 8 }}>
       <Container>
         {/* Section header */}
-        <Typography variant="subtitle2" fontSize="1.3rem" fontWeight={400} color="grey.600" gutterBottom>
+        <Typography variant="subtitle2" fontSize="1.3rem" fontWeight={400} color="#9296b5" gutterBottom>
           Why choose us
         </Typography>
 
@@ -79,7 +79,7 @@ const WhyUs = () => {
                 <Typography variant="h6" fontWeight="bold" textAlign="left" gutterBottom>
                   {feature.title}
                 </Typography>
-                <Typography variant="body2" color="grey.600" textAlign="left">
+                <Typography variant="body2" color="#9296b5" textAlign="left">
                   {feature.desc}
                 </Typography>
               </Box>
@@ -108,7 +108,7 @@ const WhyUs = () => {
                 <Typography variant="h6" fontWeight="bold" textAlign="left" gutterBottom>
                   {feature.title}
                 </Typography>
-                <Typography variant="body2" color="grey.600" textAlign="left">
+                <Typography variant="body2" color="#9296b5" textAlign="left">
                   {feature.desc}
                 </Typography>
               </Box>
