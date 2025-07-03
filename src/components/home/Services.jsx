@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import ExpenseCard from './Card'; 
 import webdev from '../../assets/images/webdev.jpg'
 import webm from '../../assets/images/wedm.jpg'
+import freelance from '../../assets/images/freelance.jpg'
 const Services = () => {
   const features = [
     {
@@ -17,6 +18,11 @@ const Services = () => {
       title: 'WEB MAINTENANCE',
       text: 'See Details'
     },
+    {
+      image: freelance, 
+      title: 'FREELANCE NETWORK',
+      text: 'See Details'
+    },
   ];
 
   return (
@@ -25,7 +31,7 @@ const Services = () => {
         <Box
           sx={{
             display: 'flex',
-            flexDirection: { xs: 'column', md: 'row' },
+            flexDirection: { xs: 'column', md: 'column-reverse' },
             gap: 6,
           }}
         >
@@ -35,7 +41,7 @@ const Services = () => {
               display: 'flex',
               flexWrap: 'wrap',
               gap: 4,
-              justifyContent: 'center',
+              justifyContent: 'start',
               flex: 1,
             }}
           >
@@ -66,7 +72,7 @@ const Services = () => {
             </Typography>
 
             <Typography
-              variant="h3"
+              variant="h2"
               fontWeight="bold"
               gutterBottom
               sx={{

@@ -1,12 +1,51 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Box, Typography, TextField, Button, Avatar } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 import MessageIcon from '@mui/icons-material/Message';
+import emailjs from 'emailjs-com'
 
 const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs.send(
+      process.env.REACT_APP_EMAILJS_SERVICE_ID,
+      process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+      formData,
+      process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+    )
+    .then((response) => {
+      alert('Message sent successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+      });
+    })
+    .catch((err) => {
+      alert('Failed to send message. Please try again later.');
+      console.error(err);
+    });
+  };
+
   return (
     <Box
     sx={{
@@ -15,7 +54,8 @@ const ContactForm = () => {
         p: { xs: 3, md: 6 },
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
-        alignContent: 'center'
+        alignContent: 'center',
+        justifyContent: 'center'
       }}
     >
 
@@ -25,6 +65,7 @@ const ContactForm = () => {
         bgcolor: '#141423',
         color: '#fff',
         borderRadius: 3,
+         maxWidth: '1000px',
         p: { xs: 3, md: 6 },
         display: 'flex',
         flexDirection: { xs: 'column', md: 'row' },
@@ -45,6 +86,9 @@ const ContactForm = () => {
         >
           <Box sx={{ flex: { xs: '1 1 100%', sm: '1 1 48%' } }}>
             <TextField
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               variant="outlined"
               placeholder="Name"
               fullWidth
@@ -56,6 +100,9 @@ const ContactForm = () => {
           </Box>
           <Box sx={{ flex: { xs: '1 1 100%', sm: '1 1 48%' } }}>
             <TextField
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
               variant="outlined"
               placeholder="Email"
               fullWidth
@@ -67,6 +114,9 @@ const ContactForm = () => {
           </Box>
           <Box sx={{ flex: { xs: '1 1 100%', sm: '1 1 48%' } }}>
             <TextField
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
               variant="outlined"
               placeholder="Phone"
               fullWidth
@@ -76,19 +126,12 @@ const ContactForm = () => {
               }}
             />
           </Box>
-          <Box sx={{ flex: { xs: '1 1 100%', sm: '1 1 48%' } }}>
-            <TextField
-              variant="outlined"
-              placeholder="Address"
-              fullWidth
-              InputProps={{
-                startAdornment: <LocationOnIcon sx={{ mr: 1 }} />,
-                sx: { borderRadius: 5, bgcolor: 'transparent', border: '1px solid #9296b5', color: '#9296b5' }
-              }}
-            />
-          </Box>
+      
           <Box sx={{ flex: '1 1 100%' }}>
             <TextField
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
               variant="outlined"
               placeholder="Message"
               multiline
@@ -102,7 +145,9 @@ const ContactForm = () => {
           </Box>
         </Box>
         <Button
+          type='submit'
           variant="contained"
+          onClick={handleSubmit}
           sx={{
             mt: 3,
             bgcolor: '#04050e',

@@ -34,7 +34,7 @@ const Footer = () => {
                 Global Web Development Standard
                 </Typography>
             
-            <Typography variant="caption" sx={{ mt: 1, display: 'block' }}>
+            <Typography variant="body1" fontSize={'1.2rem'} sx={{ mt: 1, display: 'block' }}>
               Email: webdevelopment@gwdsgroup.com
             </Typography>
             <Box sx={{ mt: 1 }}>
@@ -54,16 +54,16 @@ const Footer = () => {
             <Grid container spacing={10}>
               <Grid item xs={6} >
                 <Typography mb={2}>
-                    <Link href="#" color="inherit" underline="hover">Home</Link></Typography>
-                <Typography mb={2}><Link href="#" color="inherit" underline="hover">Services</Link></Typography>
-                <Typography mb={2}><Link href="#" color="inherit" underline="hover">Portfolio</Link></Typography>
-                <Typography mb={2}><Link href="#" color="inherit" underline="hover">Contact</Link></Typography>
+                    <Link href="/" color="inherit" underline="hover">Home</Link></Typography>
+                <Typography mb={2}><Link href="/services" color="inherit" underline="hover">Services</Link></Typography>
+                <Typography mb={2}><Link href="/portfolio" color="inherit" underline="hover">Portfolio</Link></Typography>
+                <Typography mb={2}><Link href="/contact" color="inherit" underline="hover">Contact</Link></Typography>
               </Grid>
               <Grid item xs={6} spacing={4}>
-                <Typography mb={2}><Link href="#" color="inherit" underline="hover">Services</Link></Typography>
-                <Typography mb={2}><Link href="#" color="inherit" underline="hover">Web Development</Link></Typography>
-                <Typography mb={2}><Link href="#" color="inherit" underline="hover">Web Maintenance</Link></Typography>
-                <Typography mb={2}><Link href="#" color="inherit" underline="hover">UI/UX design</Link></Typography>
+                <Typography mb={2}>Services</Typography>
+                <Typography mb={2}>Web Development</Typography>
+                <Typography mb={2}>Web Maintenance</Typography>
+                <Typography mb={2}>UI/UX design</Typography>
               </Grid>
             </Grid>
           </Grid>

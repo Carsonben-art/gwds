@@ -99,6 +99,20 @@ const ServicesSection = () => {
                   </Typography>
                 </Box>
               </Box>
+              <Box display="flex" alignItems="flex-start" gap={2}>
+                <CheckCircleIcon sx={{ color: '#ff5f6d', mt: '3px' }} />
+                <Box>
+                  <Typography variant='h4'>Freelance Network</Typography>
+                  <Typography variant="body2" color="#9296b5">
+                    If you need any other website, we will connect you with a freelancer in our 
+                    network who will be able to complete the job at an affordable price. The good 
+                    thing about this is that you don't need to worry about whether they have the 
+                    right skills, as we already checked them for you. It takes a good developer to 
+                    recognize another good developer.
+
+                  </Typography>
+                </Box>
+              </Box>
 
               
             </Stack>

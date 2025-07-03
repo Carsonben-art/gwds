@@ -30,7 +30,7 @@ const ExpenseCard = ({
 
         {/* Text content */}
         <CardContent sx={{ textAlign: 'center', padding: 2 }}>
-          <Typography variant="h6" color="text.primary" gutterBottom>
+          <Typography variant="h5" color="#04050e" gutterBottom>
             {title}
           </Typography>
 
