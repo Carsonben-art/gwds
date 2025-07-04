@@ -1,81 +1,84 @@
 import React from 'react';
-import { Box, Container, Grid, Typography, Link } from '@mui/material';
+import { Box, Container, Grid, Typography, Button } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const pages = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: 'Portfolio', path: '/portfolio' },
+  { name: 'Contact', path: '/contact' }
+];
   return (
     <Box sx={{ backgroundColor: '#04050e', color: '#fff', py: 6 }}>
       <Container maxWidth="lg">
-        <Grid container spacing={{xs: 5, md: 20}}>
+        <Grid container spacing={{ xs: 5, md: 20 }}>
           {/* Left section: Brand + subscription */}
           <Grid item xs={12} md={4}>
             <Typography
-                variant="h4"
-                fontWeight="bold"
-                // textAlign={'center'}
-                gutterBottom
-                sx={{
+              variant="h4"
+              fontWeight="bold"
+              gutterBottom
+              sx={{
                 '& span': {
-                        background: 'linear-gradient(90deg, #ff5f6d, #ffc371)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
+                  background: 'linear-gradient(90deg, #ff5f6d, #ffc371)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
                 },
-                }}
+              }}
             >
-                 <span>GWDS</span>
+              <span>GWDS</span>
             </Typography>
-             <Typography 
+            <Typography 
               variant="h6" 
               color="#9296b5"
               fontSize={{
                 xs: '1rem',
                 md: '2rem'
-              }} >
-                Global Web Development Standard
-                </Typography>
-            
+              }}
+            >
+              Global Web Development Standard
+            </Typography>
+
             <Typography variant="body1" fontSize={'1.2rem'} sx={{ mt: 1, display: 'block' }}>
               Email: webdevelopment@gwdsgroup.com
             </Typography>
-            <Box sx={{ mt: 1 }}>
-                <Link 
-                href="https://www.facebook.com/profile.php?id=61577196478175." 
-                target="_blank" 
-                rel="noopener" 
-                color="inherit"
-                >
-                <FacebookIcon sx={{ fontSize: 30 }} />
-                </Link>
-            </Box>
+                    <Box
+                      component={Link}
+                      to="https://www.facebook.com/profile.php?id=61577196478175"
+                      sx={{
+                        textDecoration: 'none',
+                        display: 'flex',
+                        flexDirection: 'column',
+                       
+                        
+                      }}
+                    >
+                     <FacebookIcon sx={{ fontSize: 40, color: '#fff' }} />
+                    </Box>
+           
           </Grid>
 
           {/* Middle links */}
-          <Grid item xs={12} md={4}>
-            <Grid container spacing={10}>
-              <Grid item xs={6} >
-                <Typography mb={2}>
-                    <Link href="/" color="inherit" underline="hover">Home</Link></Typography>
-                <Typography mb={2}><Link href="/services" color="inherit" underline="hover">Services</Link></Typography>
-                <Typography mb={2}><Link href="/portfolio" color="inherit" underline="hover">Portfolio</Link></Typography>
-                <Typography mb={2}><Link href="/contact" color="inherit" underline="hover">Contact</Link></Typography>
-              </Grid>
-              <Grid item xs={6} spacing={4}>
-                <Typography mb={2}>Services</Typography>
-                <Typography mb={2}>Web Development</Typography>
-                <Typography mb={2}>Web Maintenance</Typography>
-                <Typography mb={2}>UI/UX design</Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-
-          
+              <Box sx={{ flexGrow: 1, display: 'flex',flexDirection:'column', justifyContent: 'flex-start', paddingLeft: '2rem',  }}>
+                          {pages.map((page) => (
+                            <Button
+                              key={page.name}
+                              component={Link}
+                              to={page.path}
+                              sx={{ my: 2, color: '#9296b5', fontSize: '1.3rem', display: 'block' }}
+                            >
+                              {page.name}
+                            </Button>
+                          ))}
+                        </Box>
         </Grid>
-<hr/>
+        <hr />
         <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Typography variant="caption">
-            © 2025 <Link href="#" color="inherit" underline="always">GWDS</Link> 
+          <Typography variant="body1">
+            © 2025 GWDS
           </Typography>
-          
         </Box>
       </Container>
     </Box>

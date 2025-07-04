@@ -1,7 +1,8 @@
 import React from 'react';
 import { Box, Typography, Container } from '@mui/material';
+import { motion } from 'framer-motion';
 
-import glow from '../../assets/images/glow.png'
+import glow from '../../assets/images/glow.png';
 
 const WhoWeAre = () => {
   return (
@@ -16,54 +17,52 @@ const WhoWeAre = () => {
           }}
         >
           {/* Left content */}
-          <Box sx={{ flex: 1 }}>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.3 }}
+            style={{ flex: 1 }}
+          >
             <Typography variant="subtitle2" color="#9296b5" gutterBottom>
-                          WHO WE ARE?
-                        </Typography>
+              WHO WE ARE?
+            </Typography>
             <Typography
-                variant="h4"
-                fontWeight="bold"
-                gutterBottom
-                sx={{
+              variant="h4"
+              fontWeight="bold"
+              gutterBottom
+              sx={{
                 '& span': {
-                     background: 'linear-gradient(90deg, #ff5f6d, #ffc371)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
+                  background: 'linear-gradient(90deg, #ff5f6d, #ffc371)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
                 },
-                }}
+              }}
             >
-                 A Web Development Group striving to eventually serve the <span>worldwide community</span>
+              A Web Development Group striving to eventually serve the{' '}
+              <span>worldwide community</span>
             </Typography>
 
             <Typography variant="body1" color="#9296b5" paragraph>
-              At GWDS, we are a driven team of
-                Developers specializing in the creation of beautiful websites at an affordable and
-                competitive price. Our Developers are armed with several years of experience
-                building web applications. This is not just work for us, it's also our passion. We
-                take each work very seriously and are committed to providing the best service for
-                each client. We will work closely with you and build the website according to your
-                taste. Regardless of the type of 5 page website you need, we are experts ready
-                to assist you. We pride ourselves on client satisfaction and attention to detail. We
-                make sure to only deliver the best. You can also contact us if you need another
-                type of website.
+              At GWDS, we are a driven team of Developers specializing in the creation of beautiful websites at an affordable and competitive price. Our Developers are armed with several years of experience building web applications. This is not just work for us, it's also our passion. We take each work very seriously and are committed to providing the best service for each client. We will work closely with you and build the website according to your taste. Regardless of the type of 5 page website you need, we are experts ready to assist you. We pride ourselves on client satisfaction and attention to detail. We make sure to only deliver the best. You can also contact us if you need another type of website.
             </Typography>
-
-            
-            
-          </Box>
+          </motion.div>
 
           {/* Right image */}
-          <Box
-            component="img"
+          <motion.img
             src={glow}
             alt="About Illustration"
-            sx={{
+            style={{
               flex: 1,
-              borderRadius: 4,
+              borderRadius: '16px',
               width: '100%',
-              maxWidth: 500,
-              objectFit: 'cover',
+              maxWidth: '500px',
+              objectFit: 'cover'
             }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: 'easeOut', delay: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
           />
         </Box>
       </Container>
