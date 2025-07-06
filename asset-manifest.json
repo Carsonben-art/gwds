@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/gwds/static/css/main.e6c13ad2.css",
+    "main.js": "/gwds/static/js/main.a034b791.js",
+    "static/js/453.21cad9bf.chunk.js": "/gwds/static/js/453.21cad9bf.chunk.js",
+    "static/media/baze.png": "/gwds/static/media/baze.835f77e1b34c9d4b34ec.png",
+    "static/media/wedm.jpg": "/gwds/static/media/wedm.0107e31706f544bff74d.jpg",
+    "static/media/outfit.jpg": "/gwds/static/media/outfit.a210bbce7e609de1b910.jpg",
+    "static/media/glow.png": "/gwds/static/media/glow.90fb2c0e6fa1bfd33bb8.png",
+    "static/media/zigzag.png": "/gwds/static/media/zigzag.635385013b4f38106d7c.png",
+    "static/media/bg.png": "/gwds/static/media/bg.ef97d1eadb0b00cb6799.png",
+    "static/media/giroux.png": "/gwds/static/media/giroux.225b408c9957b64e41e0.png",
+    "static/media/engel.png": "/gwds/static/media/engel.2330c34b032605c32745.png",
+    "static/media/sImage.png": "/gwds/static/media/sImage.453147eee0c11b9bee4b.png",
+    "static/media/salts.png": "/gwds/static/media/salts.ea2f2b463f8db782e1e7.png",
+    "static/media/mesh.png": "/gwds/static/media/mesh.0844ea86315462b044b3.png",
+    "static/media/right.png": "/gwds/static/media/right.aec91cb7aba99f7e8a77.png",
+    "static/media/epesipay.png": "/gwds/static/media/epesipay.373fd862b2b81a8a6469.png",
+    "static/media/flower.jpg": "/gwds/static/media/flower.8fe5809ad1e83c5754bc.jpg",
+    "static/media/brain.jpg": "/gwds/static/media/brain.6bcf2e1f98f219114c08.jpg",
+    "static/media/creative.jpg": "/gwds/static/media/creative.5fdd668392ee64e29a87.jpg",
+    "static/media/epesipay3.jpg": "/gwds/static/media/epesipay3.a22518d74517f29c0a98.jpg",
+    "static/media/sps.png": "/gwds/static/media/sps.2f66f58a84dcc037cb9a.png",
+    "static/media/webdev.jpg": "/gwds/static/media/webdev.7b37fae293fb93ada8b9.jpg",
+    "static/media/contact.jpg": "/gwds/static/media/contact.a20271cb9dddb43924a4.jpg",
+    "static/media/beauty.jpg": "/gwds/static/media/beauty.6745f38cc94b59faea35.jpg",
+    "static/media/service.jpg": "/gwds/static/media/service.7788e98234c923d70c29.jpg",
+    "static/media/freelance.jpg": "/gwds/static/media/freelance.1a17c36f7051fa7cd686.jpg",
+    "index.html": "/gwds/index.html",
+    "main.e6c13ad2.css.map": "/gwds/static/css/main.e6c13ad2.css.map",
+    "main.a034b791.js.map": "/gwds/static/js/main.a034b791.js.map",
+    "453.21cad9bf.chunk.js.map": "/gwds/static/js/453.21cad9bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.a034b791.js"
+  ]
+}
