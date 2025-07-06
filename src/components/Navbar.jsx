@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
 const pages = [
-  { name: 'Home', path: '/' },
+  { name: 'Home', path: '/gwds' },
   { name: 'Services', path: '/services' },
   { name: 'Portfolio', path: '/portfolio' },
   { name: 'Contact', path: '/contact' }
@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Logo / Title as Link */}
         <Box
           component={Link}
-          to="/"
+          to="/gwds"
           sx={{
             textDecoration: 'none',
             display: 'flex',

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const pages = [
-  { name: 'Home', path: '/' },
+  { name: 'Home', path: '/gwds' },
   { name: 'Services', path: '/services' },
   { name: 'Portfolio', path: '/portfolio' },
   { name: 'Contact', path: '/contact' }
