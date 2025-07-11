@@ -6,7 +6,7 @@ import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
 
 const pages = [
-  { name: 'Home', path: '/gwds' },
+  { name: 'Home', path: '/' },
   { name: 'Services', path: '/services' },
   { name: 'Portfolio', path: '/portfolio' },
   { name: 'Contact', path: '/contact' }
