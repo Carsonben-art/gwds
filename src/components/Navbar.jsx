@@ -31,7 +31,7 @@ const Navbar = () => {
         {/* Logo / Title as Link */}
         <Box
           component={Link}
-          to="/gwds"
+          to="/"
           sx={{
             textDecoration: 'none',
             display: 'flex',

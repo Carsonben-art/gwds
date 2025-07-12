@@ -17,7 +17,7 @@ const Hero = () => {
         color: '#fff',
         py: 8,
         textAlign: 'center',
-        height: '100vh',
+        height: {xs: 'auto', md: '100vh'},
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -75,7 +75,10 @@ const Hero = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            flexWrap: 'nowrap',
+            flexWrap: {
+              xs: 'wrap', 
+              sm: 'nowrap'
+            },
             gap: 2,
             mt: 5,
           }}
