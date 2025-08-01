@@ -4,6 +4,7 @@ import Services from '../components/home/Services';
 import WhoWeAre from '../components/home/WhoWeAre';
 import WhyUs from '../components/home/WhyUs';
 import OurBenefits from '../components/home/OurBenefits';
+import Testimonials from '../components/testimonials/Testimonials';
 
 
 function Home() {
@@ -14,6 +15,7 @@ function Home() {
             <Services />
             <WhoWeAre />
             <WhyUs />
+            <Testimonials />
             <OurBenefits />
             
         </div>
