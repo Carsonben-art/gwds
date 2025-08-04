@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Container, Grid, Typography, Button } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/GWDSFinalLogo.png'
 
 const Footer = () => {
   const pages = [
@@ -16,30 +17,27 @@ const Footer = () => {
         <Grid container spacing={{ xs: 5, md: 20 }}>
           {/* Left section: Brand + subscription */}
           <Grid item xs={12} md={4}>
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              gutterBottom
-              sx={{
-                '& span': {
-                  background: 'linear-gradient(90deg, #ff5f6d, #ffc371)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                },
-              }}
-            >
-              <span>GWDS</span>
-            </Typography>
-            <Typography 
-              variant="h6" 
-              color="#9296b5"
-              fontSize={{
-                xs: '1rem',
-                md: '2rem'
-              }}
-            >
-              Global Web Development Standard
-            </Typography>
+            <Box
+                      component={Link}
+                      to="/"
+                      sx={{
+                        textDecoration: 'none',
+                        display: 'flex',
+                        alignItems: 'center',
+                        mr: 2,
+                      }}
+                    >
+                      <Box
+                        component="img"
+                        src={logo}
+                        alt="GWDS Logo"
+                        sx={{
+                          height: { xs: 40, md: 60 },
+                          width: 'auto',
+                          objectFit: 'contain',
+                        }}
+                      />
+                    </Box>
 
             <Typography variant="body1" fontSize={'1.2rem'} sx={{ mt: 1, display: 'block' }}>
               Email: webdevelopment@gwdsgroup.com

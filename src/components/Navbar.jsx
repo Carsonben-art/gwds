@@ -4,6 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
+import logo from '../assets/images/GWDSFinalLogo.png'
 
 const pages = [
   { name: 'Home', path: '/' },
@@ -35,33 +36,22 @@ const Navbar = () => {
           sx={{
             textDecoration: 'none',
             display: 'flex',
-            flexDirection: 'column',
+            alignItems: 'center',
             mr: 2,
-            alignItems: { xs: 'flex-start', md: 'center' }
           }}
         >
-          <Typography
-            variant="h4"
-            color="#fff"
-            noWrap
+          <Box
+            component="img"
+            src={logo}
+            alt="GWDS Logo"
             sx={{
-              fontWeight: 'bold',
-              fontSize: { xs: '1.5rem', md: '2rem' } 
+              height: { xs: 40, md: 60 },
+              width: 'auto',
+              objectFit: 'contain',
             }}
-          >
-            GWDS
-          </Typography>
-          <Typography
-            noWrap
-            sx={{
-              fontWeight: 500,
-              fontSize: { xs: '0.7rem', md: '1rem' }, 
-              color: '#fff'
-            }}
-          >
-            Global Web Development Standard
-          </Typography>
+          />
         </Box>
+
 
         {/* Desktop Menu */}
         {!isMobile && (
