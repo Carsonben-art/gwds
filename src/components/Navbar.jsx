@@ -1,22 +1,21 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem, Button } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
+import { Link } from 'react-router-dom';
+import logo from '../assets/images/GWDSFinalLogo.png'
 
-const pages = ['Home', 'Services', 'Portfolio', 'Contact'];
+const pages = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: 'Portfolio', path: '/portfolio' },
+  { name: 'Contact', path: '/contact' }
+];
 
 const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -28,33 +27,49 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#000' }}>
-      <Toolbar>
-        {/* Logo */}
-        <Box sx={{ display: 'flex', alignItems: 'center', mr: 2, flexDirection: 'column' }}>
-          <Typography variant='h4' color='#fff' noWrap sx={{fontWeight: 'bold'}}>
-            GWDS
-          </Typography>
-          <Typography  noWrap sx={{ fontWeight: '500' }}>
-            Global Web Development Standard
-          </Typography>
+    <AppBar position="fixed" sx={{ backgroundColor: '#04050e', width: '100%', borderBottom: '1px solid #9296b5' }}>
+      <Toolbar sx={{ justifyContent: 'space-between' }}>
+        {/* Logo / Title as Link */}
+        <Box
+          component={Link}
+          to="/"
+          sx={{
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            mr: 2,
+          }}
+        >
+          <Box
+            component="img"
+            src={logo}
+            alt="GWDS Logo"
+            sx={{
+              height: { xs: 40, md: 60 },
+              width: 'auto',
+              objectFit: 'contain',
+            }}
+          />
         </Box>
+
 
         {/* Desktop Menu */}
         {!isMobile && (
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
+          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start', paddingLeft: '2rem', gap: '2.5rem' }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                sx={{ my: 2, color: '#fff', display: 'block' }}
+                key={page.name}
+                component={Link}
+                to={page.path}
+                sx={{ my: 2, color: '#9296b5', fontSize: '1.3rem', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
         )}
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile Menu */}
         {isMobile && (
           <>
             <IconButton
@@ -84,8 +99,13 @@ const Navbar = () => {
               onClose={handleCloseNavMenu}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem
+                  key={page.name}
+                  component={Link}
+                  to={page.path}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
