@@ -38,6 +38,10 @@ const pricingPlans = [
       'Basic SEO',
       'Plugins Updates',
       'Bug fixes & error resolution',
+      'Backups',
+      'Security Updates',
+      'Performance Monitoring',
+      'Upto 3hrs Content update calls'
       
     ],
     buttonText: 'Contact Us Now',
@@ -99,7 +103,7 @@ const Pricing = () => {
                   variant="h6"
                   sx={{
                     fontWeight: 600,
-                    color: plan.highlight ? '#ff5f6d' : '#fff',
+                    color: plan.highlight ? '#ff5f6d' : '#ff5f6d',
                     mb: 1,
                   }}
                 >
