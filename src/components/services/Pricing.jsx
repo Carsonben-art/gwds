@@ -9,6 +9,7 @@ import {
   Divider,
 } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Link } from 'react-router-dom';
 
 const pricingPlans = [
   {
@@ -134,8 +135,11 @@ const Pricing = () => {
                   ))}
                 </Box>
                 <Button
+                    component={Link}
+                          to="/contact"
                   fullWidth
                   variant="outlined"
+                  
                   sx={{
                     backgroundColor: plan.highlight ? '#ff5f6d' : 'transparent',
                     borderColor: '#ff5f6d',
