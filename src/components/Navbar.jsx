@@ -1,16 +1,25 @@
 import React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, MenuItem, Button } from '@mui/material';
+import {
+  AppBar,
+  Box,
+  Toolbar,
+  IconButton,
+  Typography,
+  Menu,
+  MenuItem,
+  Button,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/GWDSFinalLogo.png'
+import logo from '../assets/images/GWDSFinalLogo.png';
 
 const pages = [
   { name: 'Home', path: '/' },
   { name: 'Services', path: '/services' },
   { name: 'Portfolio', path: '/portfolio' },
-  { name: 'Contact', path: '/contact' }
+  { name: 'Contact', path: '/contact' },
 ];
 
 const Navbar = () => {
@@ -27,9 +36,16 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#04050e', width: '100%', borderBottom: '1px solid #9296b5' }}>
+    <AppBar
+      position="fixed"
+      sx={{
+        backgroundColor: '#04050e',
+        width: '100%',
+        borderBottom: '1px solid #9296b5',
+      }}
+    >
       <Toolbar sx={{ justifyContent: 'space-between' }}>
-        {/* Logo / Title as Link */}
+        {/* Logo and Brand Name */}
         <Box
           component={Link}
           to="/"
@@ -37,7 +53,7 @@ const Navbar = () => {
             textDecoration: 'none',
             display: 'flex',
             alignItems: 'center',
-            mr: 2,
+            mr: 4, // space between logo area and nav links
           }}
         >
           <Box
@@ -48,20 +64,56 @@ const Navbar = () => {
               height: { xs: 40, md: 60 },
               width: 'auto',
               objectFit: 'contain',
+              mr: 1.5,
             }}
           />
+          <Box sx={{ display: 'flex', flexDirection: 'column', lineHeight: 1 }}>
+            <Typography
+              variant="subtitle2"
+              sx={{
+                fontSize: '0.9rem',
+                color: '#fff',
+                fontWeight: 500,
+              }}
+            >
+              Global Web
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{
+                fontSize: '0.9rem',
+                color: '#fff',
+                fontWeight: 500,
+              }}
+            >
+              Development Standard
+            </Typography>
+          </Box>
         </Box>
-
 
         {/* Desktop Menu */}
         {!isMobile && (
-          <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'flex-start', paddingLeft: '2rem', gap: '2.5rem' }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              paddingLeft: '2rem',
+              gap: '2.5rem',
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page.name}
                 component={Link}
                 to={page.path}
-                sx={{ my: 2, color: '#9296b5', fontSize: '1.3rem', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: '#9296b5',
+                  fontSize: '1.3rem',
+                  display: 'block',
+                  textTransform: 'none',
+                }}
               >
                 {page.name}
               </Button>
