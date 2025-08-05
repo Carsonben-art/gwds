@@ -94,11 +94,11 @@ const ServicesSection = () => {
               {[
                 {
                   title: 'Web Development',
-                  desc: 'We focus on building 5 page websites for small businesses. Price- $700. 50% advance payment is required before we begin work, or 50% of the payment after we complete half of the work.'
+                  desc: 'We offer comprehensive web development solutions tailored for small businesses seeking a strong digital presence. Our service focuses on strategic design, responsive layouts, and custom-built components that align with your brand and business goals. Each website is crafted with attention to detail, usability, and scalability, ensuring your visitors enjoy a seamless experience across devices. From concept to completion, we work closely with you to deliver a polished, high-performing website that communicates your value clearly.'
                 },
                 {
                   title: 'Website maintenance',
-                  desc: "We provide monthly maintenance for your website after it's hosted to make sure it keeps running. This includes Basic Search Engine Optimization, Updating Software, Plugins, Fixing Broken Links and Errors, and 3 hours of any updates client needs for the website. Price- $70 a month."
+                  desc: "Maintaining your website is just as important as building it. Our website maintenance service ensures your site stays functional, secure, and up to date. We proactively monitor performance, address technical issues, and handle routine updates so you can focus on running your business."
                 },
                 {
                   title: 'Freelance Network',
