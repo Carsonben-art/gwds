@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.a39a1a0c.js",
+    "main.js": "/static/js/main.ebd8aee0.js",
     "static/js/453.21cad9bf.chunk.js": "/static/js/453.21cad9bf.chunk.js",
     "static/media/baze.png": "/static/media/baze.835f77e1b34c9d4b34ec.png",
     "static/media/wedm.jpg": "/static/media/wedm.0107e31706f544bff74d.jpg",
@@ -22,18 +22,18 @@
     "static/media/epesipay3.jpg": "/static/media/epesipay3.a22518d74517f29c0a98.jpg",
     "static/media/sps.png": "/static/media/sps.2f66f58a84dcc037cb9a.png",
     "static/media/webdev.jpg": "/static/media/webdev.7b37fae293fb93ada8b9.jpg",
-    "static/media/GWDSFinalLogo.png": "/static/media/GWDSFinalLogo.5f74ce997f41893d559f.png",
     "static/media/contact.jpg": "/static/media/contact.a20271cb9dddb43924a4.jpg",
     "static/media/beauty.jpg": "/static/media/beauty.6745f38cc94b59faea35.jpg",
     "static/media/service.jpg": "/static/media/service.7788e98234c923d70c29.jpg",
     "static/media/freelance.jpg": "/static/media/freelance.1a17c36f7051fa7cd686.jpg",
+    "static/media/GWDSFinalLogo.png": "/static/media/GWDSFinalLogo.2587d0ca928981155f19.png",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.a39a1a0c.js.map": "/static/js/main.a39a1a0c.js.map",
+    "main.ebd8aee0.js.map": "/static/js/main.ebd8aee0.js.map",
     "453.21cad9bf.chunk.js.map": "/static/js/453.21cad9bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.a39a1a0c.js"
+    "static/js/main.ebd8aee0.js"
   ]
 }
