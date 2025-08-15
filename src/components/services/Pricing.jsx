@@ -9,6 +9,7 @@ import {
   Divider,
 } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import { Link } from 'react-router-dom';
 
 const pricingPlans = [
   {
@@ -25,7 +26,7 @@ const pricingPlans = [
       'Interactive',
       'Conversion Rate Optimization'
     ],
-    buttonText: 'Contact Us to get Started',
+    buttonText: 'Contact Us Now',
     highlight: true,
   },
   {
@@ -37,6 +38,10 @@ const pricingPlans = [
       'Basic SEO',
       'Plugins Updates',
       'Bug fixes & error resolution',
+      'Backups',
+      'Security Updates',
+      'Performance Monitoring',
+      'Upto 3 hours of Content updates'
       
     ],
     buttonText: 'Contact Us Now',
@@ -89,7 +94,7 @@ const Pricing = () => {
                 backgroundColor: '#16152b',
                 border: plan.highlight
                   ? '2px solid #ff5f6d'
-                  : '1px solid #2e2e4d',
+                  : '1px solid #ff5f6d',
                 maxWidth: '500px',
               }}
             >
@@ -98,7 +103,7 @@ const Pricing = () => {
                   variant="h6"
                   sx={{
                     fontWeight: 600,
-                    color: plan.highlight ? '#ff5f6d' : '#fff',
+                    color: plan.highlight ? '#ff5f6d' : '#ff5f6d',
                     mb: 1,
                   }}
                 >
@@ -134,16 +139,19 @@ const Pricing = () => {
                   ))}
                 </Box>
                 <Button
+                    component={Link}
+                          to="/contact"
                   fullWidth
                   variant="outlined"
+                  
                   sx={{
-                    backgroundColor: plan.highlight ? '#ff5f6d' : 'transparent',
+                    backgroundColor: plan.highlight ? '#ff5f6d' : '#ff5f6d',
                     borderColor: '#ff5f6d',
-                    color: plan.highlight ? '#fff' : '#ff5f6d',
+                    color: plan.highlight ? '#fff' : '#fff',
                     fontWeight: 600,
                     textTransform: 'none',
                     '&:hover': {
-                      backgroundColor: plan.highlight ? '#e34b5d' : '#1f1e36',
+                      backgroundColor: plan.highlight ? '#e34b5d' : '#e34b5d',
                     },
                   }}
                 >
