@@ -53,7 +53,7 @@ const Navbar = () => {
             textDecoration: 'none',
             display: 'flex',
             alignItems: 'center',
-            mr: 4, // space between logo area and nav links
+            mr: 4,
           }}
         >
           <Box
@@ -139,16 +139,22 @@ const Navbar = () => {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: 'bottom',
+                vertical: 'top',
                 horizontal: 'right',
               }}
-              keepMounted
               transformOrigin={{
                 vertical: 'top',
                 horizontal: 'right',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
+              PaperProps={{
+                sx: {
+                  width: '100vw', // full width
+                  backgroundColor: '#04050e', // background color
+                  color: '#fff', // text color
+                },
+              }}
             >
               {pages.map((page) => (
                 <MenuItem
@@ -156,6 +162,9 @@ const Navbar = () => {
                   component={Link}
                   to={page.path}
                   onClick={handleCloseNavMenu}
+                  sx={{
+                    justifyContent: 'center',
+                  }}
                 >
                   <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
