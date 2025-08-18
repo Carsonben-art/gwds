@@ -42,6 +42,9 @@ const Footer = () => {
             <Typography variant="body1" fontSize={'1.2rem'} sx={{ mt: 1, display: 'block' }}>
               Email: webdevelopment@gwdsgroup.com
             </Typography>
+            <Typography variant="body1" fontSize={'1.2rem'} sx={{ mt: 1, display: 'block' }}>
+              Phone: +(309) 885-1624
+            </Typography>
                     <Box
                       component={Link}
                       to="https://www.facebook.com/profile.php?id=61577196478175"
