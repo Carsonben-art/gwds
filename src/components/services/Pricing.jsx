@@ -41,7 +41,7 @@ const pricingPlans = [
       'Backups',
       'Security Updates',
       'Performance Monitoring',
-      'Upto 3 hours of Content updates'
+      'Up to 3 hours of Content updates'
       
     ],
     buttonText: 'Contact Us Now',

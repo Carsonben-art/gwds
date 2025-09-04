@@ -180,7 +180,7 @@ const ContactForm = () => {
               color="#9296b5"
               sx={{ display: 'flex', alignItems: 'center', mb: 2 }}
             >
-              <EmailIcon sx={{ mr: 1 }} /> webdevelopment@gwdsgroup.com
+              <EmailIcon sx={{ mr: 1 }} /> globalwebdevelopmentstandard@gmail.com
             </Typography>
             <Box sx={{ display: 'flex', gap: -5 }}>
               <Avatar src="https://i.pravatar.cc/100?img=1" />
