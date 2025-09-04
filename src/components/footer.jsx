@@ -40,7 +40,7 @@ const Footer = () => {
                     </Box>
 
             <Typography variant="body1" fontSize={'1.2rem'} sx={{ mt: 1, display: 'block' }}>
-              Email: webdevelopment@gwdsgroup.com
+              Email: globalwebdevelopmentstandard@gmail.com
             </Typography>
             <Typography variant="body1" fontSize={'1.2rem'} sx={{ mt: 1, display: 'block' }}>
               Phone: +(309) 885-1624
